@@ -47,4 +47,15 @@ Los parqueos registrados podrán visualizarse en un mapa mediante marcadores
 según su ubicación.
 
 ## Mockups
+En esta sección se mostrarán los mockups correspondientes a las principales pantallas de la aplicación.
+
+### Pantallas
+
+- Lista de parqueos.
+- Registro de parqueo.
+- Detalle del parqueo.
+- Edición de parqueo.
+- Filtros de búsqueda.
+- Mapa de parqueos.
+
 
