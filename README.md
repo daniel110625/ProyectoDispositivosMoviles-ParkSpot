@@ -54,37 +54,37 @@ A continuación se presentan los mockups de las principales pantallas de ParkSpo
 
 Esta pantalla permite visualizar los parqueos disponibles y acceder a la información de cada uno.
 
-![Lista de parqueos](docs/mockups/1%20Park.png)
+[Lista de parqueos](docs/mockups/1%20Park.png)
 
 ### 2. Registrar parqueo
 
 Permite registrar un nuevo parqueo, agregar una fotografía mediante la cámara o galería y seleccionar su ubicación.
 
-![Registrar parqueo](docs/mockups/2%20Park.png)
+[Registrar parqueo](docs/mockups/2%20Park.png)
 
 ### 3. Detalle del parqueo
 
 Muestra la información completa del parqueo seleccionado y las opciones para editar o eliminar.
 
-![Detalle del parqueo](docs/mockups/3%20Park.png)
+[Detalle del parqueo](docs/mockups/3%20Park.png)
 
 ### 4. Editar parqueo
 
 Permite modificar los datos de un parqueo previamente registrado.
 
-![Editar parqueo](docs/mockups/4%20Park.png)
+[Editar parqueo](docs/mockups/4%20Park.png)
 
 ### 5. Filtros
 
 Permite filtrar los parqueos según diferentes características para facilitar la búsqueda.
 
-![Filtros](docs/mockups/5.%20Park.png)
+[Filtros](docs/mockups/5.%20Park.png)
 
 ### 6. Mapa de parqueos
 
 Permite visualizar en un mapa la ubicación de los parqueos registrados.
 
-![Mapa de parqueos](docs/mockups/6.%20Park.png)
+[Mapa de parqueos](docs/mockups/6.%20Park.png)
 
 ### Pantallas
 
