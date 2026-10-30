@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ParkSpot</string>
+    <string name="parking_list">Parqueos</string>
+    <string name="search_parking">Buscar parqueo</string>
+    <string name="add_parking">Agregar Parqueo</string>
+    <string name="no_parkings">No se encontraron parqueos</string>
+    <string name="parking_name">Nombre del Parqueo</string>
+    <string name="address">Dirección</string>
+    <string name="price_per_hour">Precio por Hora</string>
+    <string name="vehicle_type">Tipo de Vehículo</string>
+    <string name="parking_type">Tipo de Parqueo</string>
+    <string name="opening_hours">Horario</string>
+    <string name="location">Ubicación</string>
+    <string name="car">Carro</string>
+    <string name="motorcycle">Motocicleta</string>
+    <string name="both">Ambos</string>
+    <string name="free">Gratuito</string>
+    <string name="paid">De Pago</string>
+    <string name="save">Guardar</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="view_details">Ver Detalles</string>
+    <string name="filters">Filtros</string>
+    <string name="apply_filters">Aplicar Filtros</string>
+    <string name="clear_filters">Limpiar Filtros</string>
+    <string name="parking_image">Imagen del Parqueo</string>
+    <string name="take_photo">Tomar Foto</string>
+    <string name="select_gallery">Seleccionar de la Galería</string>
+    <string name="map">Mapa</string>
+    <string name="nearby_parkings">Parqueos Cercanos</string>
+    <string name="delete_parking_title">Eliminar Parqueo</string>
+    <string name="delete_parking_message">¿Está seguro de que desea eliminar este parqueo?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="parking_saved">Parqueo guardado correctamente</string>
+    <string name="parking_updated">Parqueo actualizado correctamente</string>
+    <string name="parking_deleted">Parqueo eliminado correctamente</string>
+    <string name="required_fields">Por favor complete todos los campos requeridos</string>
+</resources>
