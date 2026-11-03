@@ -5,33 +5,40 @@
     android:orientation="vertical"
     android:background="#F8F9FC">
 
-    <!-- Header -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal"
+        android:background="@color/primary_blue"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingStart="20dp"
-        android:paddingEnd="24dp"
-        android:background="@color/primary_blue">
+        android:paddingEnd="24dp">
 
-        <TextView
+        <ImageView
             android:id="@+id/btnBack"
             android:layout_width="45dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="←"
-            android:textColor="@color/white"
-            android:textSize="38sp" />
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/back" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/baseline_location_on_24"
+            android:contentDescription="@string/app_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:fontFamily="sans-serif-black" />
 
     </LinearLayout>
 
@@ -49,14 +56,33 @@
             android:padding="16dp">
 
             <!-- Screen title -->
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="22dp"
-                android:text="@string/register_parking"
-                android:textColor="#081A3A"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_parking_icon"
+                    android:gravity="center"
+                    android:text="P"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/register_parking"
+                    android:textColor="#081A3A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
             <!-- Parking name -->
             <TextView
@@ -69,6 +95,8 @@
 
             <EditText
                 android:id="@+id/txtParkingName"
+                android:drawableStart="@drawable/ic_car_gray"
+                android:drawablePadding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginTop="8dp"
@@ -91,6 +119,8 @@
 
             <EditText
                 android:id="@+id/txtAddress"
+                android:drawableStart="@drawable/ic_location_gray"
+                android:drawablePadding="13dp"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginTop="8dp"
@@ -117,42 +147,103 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
-                <Button
+                <!-- CAR -->
+                <LinearLayout
                     android:id="@+id/btnCar"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginEnd="5dp"
-                    android:text="@string/car"
-                    android:textAllCaps="false"
-                    android:textColor="@color/primary_blue"
-                    android:textSize="15sp"
-                    android:backgroundTint="#DDEEFF" />
+                    android:background="@drawable/bg_vehicle_selected"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <Button
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:src="@drawable/ic_car_gray"
+                        android:contentDescription="@string/car" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/car"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- MOTORCYCLE -->
+                <LinearLayout
                     android:id="@+id/btnMotorcycle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
-                    android:text="@string/motorcycle"
-                    android:textAllCaps="false"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="15sp"
-                    android:backgroundTint="@color/filter_background" />
+                    android:background="@drawable/bg_vehicle_normal"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <Button
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:src="@drawable/ic_motorcycle"
+                        android:contentDescription="@string/motorcycle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/motorcycle"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- BOTH -->
+                <LinearLayout
                     android:id="@+id/btnBoth"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginStart="5dp"
-                    android:text="@string/both"
-                    android:textAllCaps="false"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="15sp"
-                    android:backgroundTint="@color/filter_background" />
+                    android:background="@drawable/bg_vehicle_normal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_car_gray"
+                            android:contentDescription="@string/car" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="4dp"
+                            android:src="@drawable/ic_motorcycle"
+                            android:contentDescription="@string/motorcycle" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/both"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -172,29 +263,60 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
-                <Button
+                <!-- FREE -->
+                <LinearLayout
                     android:id="@+id/btnFree"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginEnd="5dp"
-                    android:text="@string/free"
-                    android:textAllCaps="false"
-                    android:textColor="#16A13A"
-                    android:textSize="16sp"
-                    android:backgroundTint="#DDF8E4" />
+                    android:background="@drawable/bg_free_option"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <Button
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/free"
+                        android:src="@drawable/ic_free" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free"
+                        android:textColor="#16A13A"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- PAID -->
+                <LinearLayout
                     android:id="@+id/btnPaid"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginStart="5dp"
-                    android:text="@string/paid"
-                    android:textAllCaps="false"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="16sp"
-                    android:backgroundTint="@color/filter_background" />
+                    android:background="@drawable/bg_paid_option"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/paid"
+                        android:src="@drawable/ic_paid" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/paid"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -210,6 +332,8 @@
 
             <EditText
                 android:id="@+id/txtPrice"
+                android:drawableStart="@drawable/ic_paid"
+                android:drawablePadding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginTop="8dp"
@@ -232,6 +356,8 @@
 
             <EditText
                 android:id="@+id/txtOpeningHours"
+                android:drawableStart="@drawable/ic_schedule"
+                android:drawablePadding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginTop="8dp"
@@ -258,29 +384,60 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
-                <Button
+                <!-- TAKE PHOTO -->
+                <LinearLayout
                     android:id="@+id/btnTakePhoto"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginEnd="5dp"
-                    android:text="@string/take_photo"
-                    android:textAllCaps="false"
-                    android:textColor="@color/primary_blue"
-                    android:textSize="15sp"
-                    android:backgroundTint="#DDEEFF" />
+                    android:background="@drawable/bg_vehicle_selected"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <Button
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:contentDescription="@string/take_photo"
+                        android:src="@drawable/ic_camera" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/take_photo"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- GALLERY -->
+                <LinearLayout
                     android:id="@+id/btnGallery"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginStart="5dp"
-                    android:text="@string/gallery"
-                    android:textAllCaps="false"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="15sp"
-                    android:backgroundTint="@color/filter_background" />
+                    android:background="@drawable/bg_vehicle_normal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:contentDescription="@string/gallery"
+                        android:src="@drawable/ic_gallery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/gallery"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -294,33 +451,68 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btnLocation"
+            <LinearLayout
+                android:id="@+id/btnSelectLocation"
                 android:layout_width="match_parent"
-                android:layout_height="58dp"
+                android:layout_height="55dp"
                 android:layout_marginTop="8dp"
-                android:gravity="start|center_vertical"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:text="@string/select_location"
-                android:textAllCaps="false"
-                android:textColor="@color/secondary_text"
-                android:textSize="16sp"
-                android:backgroundTint="@color/filter_background" />
+                android:background="@drawable/bg_vehicle_normal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/select_location"
+                    android:src="@drawable/ic_location_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/select_location"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
 
             <!-- Save -->
-            <Button
+            <LinearLayout
                 android:id="@+id/btnSave"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:layout_marginTop="22dp"
-                android:layout_marginBottom="20dp"
-                android:text="@string/save"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:backgroundTint="@color/primary_blue" />
+                android:layout_height="58dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_save_button"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="9dp"
+                    android:contentDescription="@string/save"
+                    android:src="@drawable/ic_save" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

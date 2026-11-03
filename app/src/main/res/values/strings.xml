@@ -73,5 +73,8 @@
     <string name="apply_filters">Apply filters</string>
     <string name="nearby_parking">Nearby parking</string>
     <string name="rating_beach">4.2 (6)</string>
+    <string name="menu_icon">☰</string>
+    <string name="location_central">Downtown, Puntarenas</string>
+    <string name="schedule_value">6:00 AM - 10:00 PM</string>
 
 </resources>
