@@ -88,12 +88,45 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Parking ID"
+                android:textColor="#081A3A"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtParkingId"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/filter_background"
+                android:hint="Enter parking ID"
+                android:inputType="number"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="18dp"
+                android:text="Search Parking"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/primary_blue"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/parking_name"
                 android:textColor="#081A3A"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
+                android:hint="@string/parking_name"
                 android:id="@+id/txtParkingName"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
@@ -118,6 +151,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:hint="@string/address"
                 android:id="@+id/txtAddress"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
@@ -339,7 +373,6 @@
                 android:inputType="numberDecimal"
                 android:paddingStart="14dp"
                 android:paddingEnd="14dp"
-                android:text="0"
                 android:textColor="#081A3A"
                 android:textSize="16sp" />
 
@@ -353,6 +386,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:hint="@string/opening_hours"
                 android:id="@+id/txtOpeningHours"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
@@ -363,7 +397,7 @@
                 android:inputType="text"
                 android:paddingStart="14dp"
                 android:paddingEnd="14dp"
-                android:text="@string/opening_hours"
+
                 android:textColor="#081A3A"
                 android:textSize="16sp" />
 
@@ -495,6 +529,15 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginBottom="20dp"
+                android:text="Delete Parking"
+                android:textAllCaps="false"
+                android:backgroundTint="#D32F2F"
+                android:textColor="@color/white" />
         </LinearLayout>
 
     </ScrollView>
